@@ -61,7 +61,7 @@ If you do this, you will need to include the following JavaScript somewhere in t
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
-Debuging
+Debugging
 --------
 
 By default, Flask-Twitter-OEmbedder will return an empty string for any input into the function which Twitter does not return an appropriate response to. This is ideal in production, as you likely don't want your entire application to crash because a Tweet ID doesn't work (this could happen not only in error, for example the tweeter could have deleted their tweet or the twitter API could be down for the moment). However, when debugging it may be desirable to actually raise the error and bring you to the build in Flask debugger (assuming you have set `app.debug = True` as well). By default, Flask-Twitter-OEmbedder will inherit the `app.debug` state, however you can override this with the following:
